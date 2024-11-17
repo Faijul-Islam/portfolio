@@ -74,7 +74,7 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
           ),
           ActionButton(
               onTap: ()=>scrollTo(projectKye,"projectKey"),
-              text: "Project",
+              text: "Projects",
             isSelected: selectedKey == 'projectKey',
           ),
           ActionButton(
