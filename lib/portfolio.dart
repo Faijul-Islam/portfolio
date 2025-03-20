@@ -43,75 +43,92 @@ class _PortfolioScreenState extends State<PortfolioScreen> {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    return Scaffold(
-      backgroundColor: const Color(0xFF0A0909),
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        title: Text('Faijul Islam',
-          style:CustomTextStyle.titleText(28),
-        ),
-        //centerTitle: true,
-        actions: [
-          ActionButton(
-              onTap: ()=>scrollTo(homeKey,"homeKey"),
-              isSelected: selectedKey == 'homeKey',
-              text: "Home"
-          ),
-          ActionButton(
-              onTap: ()=>scrollTo(aboutKye,"aboutKey"),
-              text: "About me",
-            isSelected: selectedKey == 'aboutKey',
-          ),
-          ActionButton(
-              onTap: ()=>scrollTo(skillKye,"skillsKey"),
-              text: "Skills",
-            isSelected: selectedKey == 'skillsKey',
-          ),
-          ActionButton(
-              onTap: ()=>scrollTo(experienceKye,"experienceKey"),
-              text: "Experience",
-            isSelected: selectedKey == 'experienceKey',
-          ),
-          ActionButton(
-              onTap: ()=>scrollTo(projectKye,"projectKey"),
-              text: "Projects",
-            isSelected: selectedKey == 'projectKey',
-          ),
-          ActionButton(
-              onTap: ()=>scrollTo(contactKye,"contact"),
-              text: "Contact",
-            isSelected: selectedKey == 'contact',
-          ),
-        ],
-      ),
-      body: SingleChildScrollView(
-        padding: EdgeInsets.all(50),
-        child: Column(
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: const Color(0xFF102A43),
+        body: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-             Home(
-              key: homeKey,
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20,vertical: 16),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Text('Faijul Islam',
+                      style:CustomTextStyle.titleText(28),
+                    ),
+                    const SizedBox(width: 20,),
+                    ActionButton(
+                        onTap: ()=>scrollTo(homeKey,"homeKey"),
+                        isSelected: selectedKey == 'homeKey',
+                        text: "Home"
+                    ),
+                    ActionButton(
+                      onTap: ()=>scrollTo(aboutKye,"aboutKey"),
+                      text: "About me",
+                      isSelected: selectedKey == 'aboutKey',
+                    ),
+                    ActionButton(
+                      onTap: ()=>scrollTo(skillKye,"skillsKey"),
+                      text: "Skills",
+                      isSelected: selectedKey == 'skillsKey',
+                    ),
+                    ActionButton(
+                      onTap: ()=>scrollTo(experienceKye,"experienceKey"),
+                      text: "Experience",
+                      isSelected: selectedKey == 'experienceKey',
+                    ),
+                    ActionButton(
+                      onTap: ()=>scrollTo(projectKye,"projectKey"),
+                      text: "Projects",
+                      isSelected: selectedKey == 'projectKey',
+                    ),
+                    ActionButton(
+                      onTap: ()=>scrollTo(contactKye,"contact"),
+                      text: "Contact",
+                      isSelected: selectedKey == 'contact',
+                    ),
+                  ],
+                ),
+              ),
             ),
-            const SizedBox(height: 20),
-             About(
-              key: aboutKye,
-            ),
-            const SizedBox(height: 20),
-            Skills(
-              key: skillKye,
-            ),
-            const SizedBox(height: 20),
-           Experience(
-             key: experienceKye,
-           ),
+            Expanded(
+              child: SingleChildScrollView(
+                padding: EdgeInsets.symmetric(horizontal: 12,vertical: 10),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
 
-            const SizedBox(height: 20),
-             Projects(
-              key: projectKye,
-            ),
-            const SizedBox(height: 20),
-             Contact(
-              key:contactKye ,
+                     Home(
+                      key: homeKey,
+                    ),
+                    const SizedBox(height: 20),
+                     About(
+                      key: aboutKye,
+                    ),
+                    const SizedBox(height: 20),
+                    Skills(
+                      key: skillKye,
+                    ),
+                    const SizedBox(height: 20),
+                   Experience(
+                     key: experienceKye,
+                   ),
+
+                    const SizedBox(height: 20),
+                     Projects(
+                      key: projectKye,
+                    ),
+                    const SizedBox(height: 20),
+                     Contact(
+                      key:contactKye ,
+                    ),
+                  ],
+                ),
+              ),
             ),
           ],
         ),
