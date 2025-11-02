@@ -7,17 +7,21 @@ class CommonCard extends StatelessWidget {
   final Widget widget;
   final double mHorizontal;
   final double mVertical;
+  final double pVertical;
+  final double pHorizontal;
   const CommonCard({
     super.key,
     required this.widget,
     this .mHorizontal=12,
     this .mVertical=12,
+     this.pVertical=10,
+     this.pHorizontal=10,
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical:10.h ,horizontal: 12.w),
+      padding: EdgeInsets.symmetric(horizontal: pVertical.w, vertical: pHorizontal.h),
       margin: EdgeInsets.symmetric(horizontal: mHorizontal.w, vertical: mVertical.h),
       decoration: BoxDecoration(
         color: const Color(0xFFEBEBEB),

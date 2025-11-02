@@ -32,7 +32,7 @@ class Home extends StatelessWidget {
                     ),
                     Text(
 
-                      "Flutter developer with 2 years of experience. I have completed many projects that prove my ability to provide creative and high-quality solutions.",
+                      "Flutter developer with 2.5 years of experience. I have completed many projects that prove my ability to provide creative and high-quality solutions.",
                       style:CustomTextStyle.descriptionText(18,color: Colors.black),
                       textAlign: TextAlign.justify,
                     ),

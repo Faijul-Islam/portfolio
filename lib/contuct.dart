@@ -32,7 +32,7 @@ class Contact extends StatelessWidget {
         const SizedBox(height: 10,),
         Text(
           'For any service and work you can contact with me by send an email or by our social media accounts.',
-          style:CustomTextStyle.descriptionText(16.sp,color: Colors.black),
+          style:CustomTextStyle.descriptionText(16,color: Colors.black),
         ),
         const SizedBox(height: 10,),
         Wrap(
